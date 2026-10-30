@@ -1,0 +1,9 @@
+project: savantenvs/sqlite
+target: ossfuzz
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ossfuzz/testsuite
+cmds:
+  - cmd: /mayhem/ossfuzz
+    libfuzzer: true
+    timeout: 30
