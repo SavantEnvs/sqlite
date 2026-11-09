@@ -1,0 +1,10 @@
+# seed-from: https://app.mayhem.security/savantenvs/sqlite/ossfuzz
+project: savantenvs/sqlite
+target: ossfuzz-mined-b1e2fd1
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ossfuzz-mined-b1e2fd1/testsuite
+cmds:
+  - cmd: /mayhem/ossfuzz
+    libfuzzer: true
+    timeout: 30
